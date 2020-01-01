@@ -45,3 +45,5 @@ Temporary Items
 .settings
 target
 .classpath
+dubbo.test.client.iml
+.idea
