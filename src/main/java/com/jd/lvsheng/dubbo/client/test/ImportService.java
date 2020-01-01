@@ -2,7 +2,6 @@ package com.jd.lvsheng.dubbo.client.test;
 
 import org.apache.dubbo.common.utils.NetUtils;
 import org.apache.dubbo.config.ApplicationConfig;
-import org.apache.dubbo.config.ProtocolConfig;
 import org.apache.dubbo.config.ReferenceConfig;
 import org.apache.dubbo.config.RegistryConfig;
 import org.dubbo.server.api.DemoService;
@@ -17,7 +16,7 @@ public class ImportService {
 	@Autowired
 	private ApplicationConfig application;
 	
-	private ReferenceConfig<DemoService> newServiceConfig(String group) {
+	private ReferenceConfig<DemoService> newReferenceConfig(String group) {
 		ReferenceConfig<DemoService> reference = new ReferenceConfig<DemoService>();
 		reference.setApplication(application);
 		reference.setRegistry(registry);
@@ -27,7 +26,7 @@ public class ImportService {
 	}
 	
 	public void port() {
-		ReferenceConfig<DemoService> service = newServiceConfig("IM-CELL-ACCESS-" + NetUtils.getLocalAddress().getHostAddress() + "-"
+		ReferenceConfig<DemoService> service = newReferenceConfig("IM-CELL-ACCESS-" + NetUtils.getLocalAddress().getHostAddress() + "-"
 																		+ "25000");
 		DemoService ds = service.get();
 		System.out.println(ds.sayHello("ls"));
