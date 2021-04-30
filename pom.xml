@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <v.spring>4.3.16.RELEASE</v.spring>
+        <v.spring>4.3.29.RELEASE</v.spring>
         <v.dubbo>2.7.5</v.dubbo>
     </properties>
 
