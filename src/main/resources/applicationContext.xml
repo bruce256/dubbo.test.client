@@ -21,5 +21,6 @@
 
     <!-- 生成远程服务代理，可以像使用本地bean一样使用demoService -->
     <dubbo:reference interface="org.dubbo.server.api.DemoService" id="demoService"
-                     stub="com.jd.lvsheng.dubbo.client.test.DemoServiceStub" registry="registry"/>
+                     registry="registry"/>
+    <!--stub="com.jd.lvsheng.dubbo.client.test.DemoServiceStub"-->
 </beans>

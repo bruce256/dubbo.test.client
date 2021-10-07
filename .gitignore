@@ -47,3 +47,5 @@ target
 .classpath
 dubbo.test.client.iml
 .idea
+com
+org
